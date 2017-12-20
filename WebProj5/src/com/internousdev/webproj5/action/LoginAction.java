@@ -28,11 +28,30 @@ public class LoginAction extends ActionSupport implements SessionAware{
 		if(this.username.equals(loginDTOList.get(0).getUsername())
 		&&this.password.equals(loginDTOList.get(0).getPassword())){
 			session.put("loginDTOList",loginDTOList );
+			ret=SUCCESS;
 		}
+		return ret;
 	}
 
+	public String getUsername() {
+		return username;
+	}
+	public void setUsername(String username) {
+		this.username = username;
+	}
 
-	{
-}
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+	public Map<String, Object>getSession() {
+		return session;
+	}
+	public void setSession(Map<String,Object> session) {
+		this.session = session;
+	}
 
 }

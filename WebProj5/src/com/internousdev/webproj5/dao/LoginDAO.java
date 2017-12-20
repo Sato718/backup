@@ -23,7 +23,7 @@ public class LoginDAO {
 
 
 
-		String sql = "select * from users where user_name=? and passport=?";
+		String sql = "select * from users where user_name=? and password=?";
 		try{
 			PreparedStatement ps = con.prepareStatement(sql);
 			ps.setString(1, username);
