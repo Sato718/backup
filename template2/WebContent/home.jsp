@@ -3,13 +3,13 @@
 
 <%@ taglib prefix="s" uri="/struts-tags" %>
 
-<!DOCTYPE>
+<!DOCTYPE html>
 <html>
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta http-equiv="Content-Style-Type" content="text/css" />
-	<meta http-equiv="Content-Script-Type" content="text/javascript">
-	<meta http-equiv="imagetoolbar" content="no">
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="imagetoolbar" content="no" />
 	<meta name="description" content="" />
 	<meta name="keywords" content="" />
 	<title>Home画面</title>
@@ -45,13 +45,12 @@
 
 		#main{
 			width:100%;
-			height:80px;
-			background-color:black;
-			clear:both;
+			height:500px;
+			text-align:center;
 		}
 		#footer {
 			width:100%;
-			height:80%:
+			height:80px:
 			background-color:black
 			clear:both;
 		}
@@ -68,7 +67,7 @@
 		</div>
 
 		<div>
-			<s:form actin="HomeAction">
+			<s:form action="HomeAction">
 
 				<s:submit value="商品購入"/>
 			</s:form>

@@ -6,7 +6,7 @@ public class HomeAction extends ActionSupport {
 
 	/**
 	 * ログインボタン押下時に実行
-	 * ログイン顔面へ遷移します。
+	 * ログイン画面へ遷移します。
 	 *
 	 * @return SUCCESS
 	 */
