@@ -8,26 +8,15 @@ import com.internousdev.ecsite.util.DBConnector;
 import com.internousdev.ecsite.util.DateUtil;
 
 public class BuyItemCompleteDAO {
-
 	private DBConnector dbConnector = new DBConnector();
-
 	private Connection connection = dbConnector.getConnection();
-
 	private DateUtil dateUtil = new DateUtil();
+	private String sql = "INSERT INTO user_buy_item_transaction (item_transaction_id,total_price,total_count,user_master_id,pay,insert_date) VALUES(?,?,?,?,?,?)";
 
-	private String sql = "INSERT INTO user_buy_item_transaction (item_transaction_id, total_price, total_count, user_master_id, pay, insert_date) VALUES(?, ?, ?, ?, ?, ?)";
-
-	/**
+	/*
 	 * 商品購入情報登録メソッド
-	 *
-	 * @param item_transaction_id
-	 * @param user_master_id
-	 * @param total_price
-	 * @param total_count
-	 * @param pay
-	 * @throws SQLException
 	 */
-	public void buyItemInfo(String item_transaction_id, String user_master_id, String total_price, String total_count, String pay) throws SQLException {
+	public void buyItemInfo(String item_transaction_id,String user_master_id,String total_price,String total_count,String pay) throws SQLException {
 
 		try {
 			PreparedStatement preparedStatement = connection.prepareStatement(sql);
@@ -39,10 +28,9 @@ public class BuyItemCompleteDAO {
 			preparedStatement.setString(6, dateUtil.getDate());
 
 			preparedStatement.execute();
-
-		} catch(Exception e) {
+		}catch(Exception e){
 			e.printStackTrace();
-		} finally {
+		}finally {
 			connection.close();
 		}
 	}

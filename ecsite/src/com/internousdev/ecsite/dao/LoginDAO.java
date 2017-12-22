@@ -10,20 +10,13 @@ import com.internousdev.ecsite.util.DBConnector;
 public class LoginDAO {
 
 	private DBConnector dbConnector = new DBConnector();
-
 	private Connection connection = dbConnector.getConnection();
-
 	private LoginDTO loginDTO = new LoginDTO();
 
 	/**
-	 * ログインユーザ情報取得メソッド
-	 *
-	 * @param loginUserId
-	 * @param loginPassword
-	 * @return LoginDTO
+	 * ログインユーザ7情報取得
 	 */
-	public LoginDTO getLoginUserInfo(String loginUserId, String loginPassword) {
-
+	public LoginDTO getLoginUserInfo(String loginUserId,String loginPassword) {
 		String sql = "SELECT * FROM login_user_transaction where login_id = ? AND login_pass = ?";
 
 		try {
@@ -42,8 +35,7 @@ public class LoginDAO {
 					loginDTO.setLoginFlg(true);
 				}
 			}
-
-		} catch(Exception e) {
+		}catch(Exception e){
 			e.printStackTrace();
 		}
 
