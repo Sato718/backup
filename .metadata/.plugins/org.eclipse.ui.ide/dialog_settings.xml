@@ -12,6 +12,7 @@
 		<item value="false" key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID"/>
 		<item value="false" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="C:\Users\internousdev\Desktop\workspace\workspace-sato\template"/>
 			<item value="C:\Users\internousdev\Desktop\workspace\workspace-sato\backup\ecsite"/>
 			<item value="C:\Users\internousdev\Desktop\workspace\workspace-sato\backup\template2"/>
 			<item value="C:\Users\internousdev\Downloads\template2"/>
