@@ -11,6 +11,7 @@
 	<meta http-equiv="Content-Script-Type" content="text/javascript" />
 	<meta http-equiv="imagetoolbar" content="no" />
 	<meta name="description" content="" />
+	<meta name="keywords" content="" />
 	<meta charset="utf-8">
 	<title>MyPage画面</title>
 	<style type="text/css">
@@ -35,7 +36,7 @@
 		#top {
 			width:780px;
 			margin: 30px auto;
-			background-color: 1px solid #333;
+			border:1px solid #333;
 		}
 
 		#header {
@@ -54,9 +55,10 @@
 			width: 100%;
 			height: 80px;
 			background-color: black;
+			clear:both;
 		}
 
-		#text-roght {
+		#text-right {
 			display: inline-block;
 			text-align: right;
 		}
@@ -65,6 +67,10 @@
 <body>
 	<div id="header">
 		<div id="pr">
+		</div>
+		</div>
+		<div id="main">
+			<div id="top">
 			<p>MyPage</p>
 		</div>
 		<div>

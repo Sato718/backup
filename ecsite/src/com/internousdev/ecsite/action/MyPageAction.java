@@ -13,20 +13,32 @@ import com.opensymphony.xwork2.ActionSupport;
 
 public class MyPageAction extends ActionSupport implements SessionAware{
 
+	/**
+	 * ログイン情報を格納
+	 */
 	public Map<String,Object> session;
 
+	/**
+	 * マイページ情報取得DAO
+	 */
 	private MyPageDAO myPageDAO = new MyPageDAO();
 
+	/**
+	 * マイページ情報格納DTO
+	 */
 	public ArrayList<MyPageDTO> myPageList = new ArrayList<MyPageDTO>();
 
+	/**
+	 * 削除フラグ
+	 */
 	private String deleteFlg;
 	private String message;
 
 	/**
 	 * 商品履歴取得メソッド
 	 */
-
 	public String execute() throws SQLException {
+
 		if (!session.containsKey("id")) {
 			return ERROR;
 		}

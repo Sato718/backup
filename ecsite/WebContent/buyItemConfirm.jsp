@@ -65,6 +65,7 @@
 		function submitAction(url) {
 			$('form').attr('action',url);
 			$('form').submit();
+
 		}
 	</script>
 </head>

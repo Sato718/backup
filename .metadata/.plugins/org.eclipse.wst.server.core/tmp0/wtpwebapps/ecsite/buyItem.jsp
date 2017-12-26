@@ -6,11 +6,12 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<meta http-equiv="Cntent-Type" content="text/html; charset=utf-8" />
-	<meta http-equiv="Cntent-Style-Type" content="text/css" />
-	<meta http-equiv="Cntent-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
 	<meta http-equiv="imagetoolbar" content="no" />
 	<meta name="description" content="" />
+	<meta name="keywords" content="" />
 	<meta charset="utf-8">
 	<title>BuyItem画面</title>
 	<style type="text/css">
@@ -89,7 +90,7 @@
 				</tr>
 				<tr>
 					<td>
-						<span>購入回数</span>
+						<span>購入個数</span>
 					</td>
 					<td>
 						<select name="count">
@@ -107,7 +108,7 @@
 					</td>
 					<td>
 						<input type="radio" name="pay" value="1" checked="checked">現金払い
-						<input type="radio" name="pay" value="2" checked="checked">クレジットカード
+						<input type="radio" name="pay" value="2">クレジットカード
 					</td>
 				</tr>
 				<tr>
