@@ -1,5 +1,6 @@
 package com.internousdev.ecsite.action;
 
+import java.util.ArrayList;
 import java.util.Map;
 
 import org.apache.struts2.interceptor.SessionAware;
@@ -26,7 +27,7 @@ public class LoginAction extends ActionSupport implements SessionAware{
 	 */
 	public Map<String,Object> session;
 
-	/*
+	/**
 	 * ログイン情報取得DAO
 	 */
 	private LoginDAO loginDAO = new LoginDAO();
@@ -42,10 +43,43 @@ public class LoginAction extends ActionSupport implements SessionAware{
 	private BuyItemDAO buyItemDAO = new BuyItemDAO();
 
 	/**
+	 * エラーメッセージ
+	 */
+	private ArrayList<String> errorMessageList = new ArrayList<>();
+
+
+	/**
 	 * 実行メソッド
 	 */
 	public String execute() {
 		String result = ERROR;
+		/*UserInfoDTO userInfoDTO = new UserInfoDTO();*/
+		LoginDAO loginDAO = new LoginDAO();
+
+		// ユーザーID入力チェック
+				if (loginUserId == null) {
+					return "login";
+				}
+				if (loginUserId.equals("")) {
+					errorMessageList.add("ユーザーIDを入力してください");
+
+				} else if (loginUserId.length() < 1 || loginUserId.length() > 8) {
+					errorMessageList.add("ユーザーIDは1文字以上8文字以下で入力してください");
+
+				} else if (!loginUserId.matches("^[a-zA-Z0-9]+$")) {
+					errorMessageList.add("ユーザーIDは半角英数字で入力してください");
+				}
+
+				// パスワード入力チェック
+				if (loginPassword.equals("")) {
+					errorMessageList.add("パスワードを入力してください。");
+
+				} else if (loginPassword.length() < 1 || loginPassword.length() > 16) {
+					errorMessageList.add("パスワードは1文字以上16文字以下で入力してください");
+
+				} else if (!loginPassword.matches("^[a-zA-Z0-9]+$")) {
+					errorMessageList.add("パスワードは半角英数字で入力してください");
+				}
 
 		//ログイン実行
 		loginDTO =loginDAO.getLoginUserInfo(loginUserId, loginPassword);

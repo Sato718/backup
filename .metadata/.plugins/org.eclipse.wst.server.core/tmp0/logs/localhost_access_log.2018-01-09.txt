@@ -1,0 +1,15 @@
+127.0.0.1 - - [09/Jan/2018:12:40:55 +0900] "GET / HTTP/1.1" 404 1019
+0:0:0:0:0:0:0:1 - - [09/Jan/2018:12:40:58 +0900] "GET /cherry/ HTTP/1.1" 200 689
+0:0:0:0:0:0:0:1 - - [09/Jan/2018:12:41:00 +0900] "POST /cherry/SerchAction;jsessionid=0C344255BFFDC91030501229316D578F HTTP/1.1" 200 3435
+127.0.0.1 - - [09/Jan/2018:17:53:30 +0900] "GET / HTTP/1.1" 404 1019
+0:0:0:0:0:0:0:1 - - [09/Jan/2018:17:53:34 +0900] "GET /Warasibe/ HTTP/1.1" 200 1182
+0:0:0:0:0:0:0:1 - - [09/Jan/2018:17:53:34 +0900] "GET /Warasibe/css/login_auth.css HTTP/1.1" 200 418
+0:0:0:0:0:0:0:1 - - [09/Jan/2018:17:53:34 +0900] "GET /Warasibe/css/common.css HTTP/1.1" 200 1918
+0:0:0:0:0:0:0:1 - - [09/Jan/2018:17:53:34 +0900] "GET /Warasibe/images/logo.png HTTP/1.1" 200 5596
+0:0:0:0:0:0:0:1 - - [09/Jan/2018:17:53:40 +0900] "POST /Warasibe/LoginAction.action;jsessionid=05227D08B041B35C1DF3F4E0933F49C6 HTTP/1.1" 200 9416
+0:0:0:0:0:0:0:1 - - [09/Jan/2018:17:53:47 +0900] "GET /Warasibe/signup.jsp HTTP/1.1" 200 1161
+0:0:0:0:0:0:0:1 - - [09/Jan/2018:17:54:06 +0900] "POST /Warasibe/SignupAction.action HTTP/1.1" 200 1240
+0:0:0:0:0:0:0:1 - - [09/Jan/2018:17:54:06 +0900] "GET /Warasibe/css/login_auth.css HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [09/Jan/2018:17:54:06 +0900] "GET /Warasibe/css/common.css HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [09/Jan/2018:17:54:06 +0900] "GET /Warasibe/images/logo.png HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [09/Jan/2018:17:54:11 +0900] "POST /Warasibe/SignupConfirmAction.action HTTP/1.1" 200 9429

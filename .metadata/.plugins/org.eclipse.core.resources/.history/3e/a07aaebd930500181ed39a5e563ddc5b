@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>500エラー</title>
+	<link rel="shortcut icon" href="${pageContext.request.contextPath}/img/error.png">
+	<link rel="shortcut icon" href="${pageContext.request.contextPath}/img/yama.png">
+	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/sato_style.css">
+</head>
+<body>
+
+<div id="field">
+<img  src="/cherry/img/yama.png" width="100%" height="100%">
+<div id="girl" style="margin-bottom: -860px;">
+<img src="/cherry/img/error.png" >
+</div>
+</div>
+
+
+
+<h1>500</h1>
+<br>
+<h2>正しい処理がおこなわれませんでした。<br>
+<a href="home.jsp">最初から</a>やり直してください。</h2>
+</body>
+</html>
+

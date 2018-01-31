@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>500エラー</title>
+	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/sato_style.css">
+</head>
+<body>
+
+<img src="cherryerror.png"  width="300" height="200">
+
+<h1>500</h1>
+<br>
+<h2>正しい処理がおこなわれませんでした。<br>
+<a href="home.jsp">最初から</a>やり直してください。</h2>
+</body>
+</html>

@@ -1,0 +1,45 @@
+package com.internousdev.cherry.action;
+
+import java.util.Map;
+
+import org.apache.struts2.interceptor.SessionAware;
+
+import com.internousdev.cherry.util.RandomTokenizer;
+import com.opensymphony.xwork2.ActionSupport;
+
+public class TokenAction extends ActionSupport implements SessionAware{
+
+
+	private Map<String, Object> session;
+	public String execute(){
+		String token=String.valueOf(session.get("token"));
+		String nextToken=String.valueOf(session.get("nextToken"));
+
+		if(token!=nextToken){
+			RandomTokenizer t = new RandomTokenizer();
+			nextToken=t.getRandomToken();
+			session.put("token", token);
+			session.put("nextToken",nextToken);
+		}else{
+			return ERROR;
+		}
+
+
+
+
+
+
+
+		return SUCCESS;
+	}
+	public Map<String, Object> getSession() {
+		return session;
+	}
+	public void setSession(Map<String, Object> session) {
+		this.session = session;
+	}
+
+
+
+
+}
